@@ -1,0 +1,144 @@
+baseURL = "https://liuyunyishui.github.io/blog"
+languageCode = "zh-cn"
+hasCJKLanguage =  true
+
+publishDir="docs"
+
+uglyURLs = true
+#canonifyURLs=true
+#relativeURLs = true
+
+enableEmoji = true
+
+# 禁用页面种类
+disableKinds = ["RSS", "robotsTXT"]
+
+#disqusShortname = "username" # delete this to disable disqus comments
+# Enter your tracking code to enable Google Analytics
+#googleAnalytics = ""
+
+# 对应html>head>title
+title = "流云的Blog"
+description = "流云的Blog"
+
+# 主题设置
+#theme = "minimal"
+theme = [
+"minimal",
+"hugo-identity-theme", 
+]
+
+[[menu.main]]
+    url = "/"
+    name = "Home"
+    weight = 1
+
+[[menu.main]]
+    url = "/post.html"
+    name = "Posts"
+    weight = 2
+
+[[menu.main]]
+    url = "/category.html"
+    name = "Categories"
+    weight = 3
+
+[[menu.main]]
+    url = "/about.html"
+    name = "About"
+    weight = 4
+
+[params]
+
+    # 图片设置
+    # static/images/icons
+    favicon_ico_sizes = "16x16 32x32"
+    #favicon_png_sizes = "96x96"
+
+    favicon_ico = "favicon.ico"
+
+    #favicon_png = "favicon.png"
+    #favicon_svg = ""
+
+    favicon = "favicon.jpg"
+    appleicon = "favicon.ico"
+  
+
+    accent = "lightblue"
+    showBorder = true
+    backgroundColor = "white"
+
+    font = "Raleway"    # should match the name on Google Fonts!
+    highlight = true
+    highlightStyle = "solarized-dark"
+    highlightLanguages = ["java", "javascript", "sql", "go", "haskell", "kotlin", "scala", "swift"]
+
+    author = "流云"
+    description = "Personal blog theme powered by Hugo"
+    githubUsername = "liuyunyishui"
+
+    [params.personal]
+        name = "流云"
+        # 主页头像 ，位置在 /images/avatars/
+        avatar = "liuyun.jpg"
+        position = "Java Engineer"
+
+        livesIn = "[上海, 中国](#)"
+
+# Social icons to be shown on the right-hand side of the navigation bar
+# The "name" field should match the name of the icon to be used
+# The list of available icons can be found at http://fontawesome.io/icons/
+
+#[[menu.icon]]
+#    url = "mailto:liuyunyishui@gmail.com"
+#    name = "envelope-o"
+#    weight = 1
+
+[[menu.icon]]
+    title = "微博"
+    name = "weibo"
+    url = "https://weibo.com/5628184250"
+    target = "_blank"
+    weight = 1
+
+[[menu.icon]]
+    url = "https://github.com/liuyunyishui"
+    name = "github"
+    weight = 2
+
+[[menu.icon]]
+    url = "https://stackoverflow.com/users/10763940"
+    name = "stack-overflow"
+    weight = 3
+
+[[menu.icon]]
+    url = "https://twitter.com/liuyunyishui/"
+    name = "twitter"
+    weight = 4
+
+[[menu.icon]]
+    url = "https://www.facebook.com/liuyunyishui"
+    name = "facebook-f"
+    weight = 5
+    
+# [[params.social]]
+#    title = "Twitter"
+#    icon = "fa-twitter"
+#    link = "#"
+#    target = "_blank"
+
+# [[params.social]]
+#    title = "Facebook"
+#    icon = "fa-facebook"
+#    link = "#"
+#    target = "_blank"
+
+# Footer settings
+[params.footer]
+    # If copyright is not set, author is used
+    copyright = "Innovation inc"
+
+# Page license
+[params.license]  
+    link = "https://creativecommons.org/licenses/by-sa/4.0/legalcode"
+    name = "CC-BY-SA-4.0"
