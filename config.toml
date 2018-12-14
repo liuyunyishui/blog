@@ -17,17 +17,17 @@ disableKinds = ["RSS", "robotsTXT"]
 # Enter your tracking code to enable Google Analytics
 #googleAnalytics = ""
 
-# 对应html>head>title
-title = "流云的Blog"
+# 对应html>head>title、Title属性
+title = "流云居"
 description = "流云的Blog"
+paginate = 8
 
+MathJax = false
 # 主题设置
-#theme = "minimal"
-theme = [
-"minimal",
-"hugo-identity-theme", 
-]
+theme = "liuyun"
+# 主题属性
 
+#菜单
 [[menu.main]]
     url = "/"
     name = "Home"
@@ -35,11 +35,11 @@ theme = [
 
 [[menu.main]]
     url = "/post.html"
-    name = "Posts"
+    name = "Archives"
     weight = 2
 
 [[menu.main]]
-    url = "/category.html"
+    url = "/categories.html"
     name = "Categories"
     weight = 3
 
@@ -49,94 +49,78 @@ theme = [
     weight = 4
 
 [params]
-
     # 图片设置
     # static/images/icons
     favicon_ico_sizes = "16x16 32x32"
     #favicon_png_sizes = "96x96"
 
-    favicon_ico = "favicon.ico"
-
-    #favicon_png = "favicon.png"
-    #favicon_svg = ""
-
     favicon = "favicon.jpg"
+    #favicon_ico = "favicon.ico"
+    #favicon_png = "favicon.png"
+    #favicon_svg = "favicon.svg"
+
     appleicon = "favicon.ico"
-  
+
+    profilePic = "liuyun.jpg"
 
     accent = "lightblue"
     showBorder = true
     backgroundColor = "white"
 
-    font = "Raleway"    # should match the name on Google Fonts!
+    font = "KaiTi"    # should match the name on Google Fonts!
     highlight = true
     highlightStyle = "solarized-dark"
-    highlightLanguages = ["java", "javascript", "sql", "go", "haskell", "kotlin", "scala", "swift"]
+    highlightLanguages = ["java", "javascript", "sql", "go"]
 
     author = "流云"
-    description = "Personal blog theme powered by Hugo"
+    description = "Personal blog"
     githubUsername = "liuyunyishui"
 
-    [params.personal]
-        name = "流云"
-        # 主页头像 ，位置在 /images/avatars/
-        avatar = "liuyun.jpg"
-        position = "Java Engineer"
-
-        livesIn = "[上海, 中国](#)"
-
+    
 # Social icons to be shown on the right-hand side of the navigation bar
 # The "name" field should match the name of the icon to be used
 # The list of available icons can be found at http://fontawesome.io/icons/
 
-#[[menu.icon]]
+#[[params.social]]
 #    url = "mailto:liuyunyishui@gmail.com"
 #    name = "envelope-o"
 #    weight = 1
 
-[[menu.icon]]
-    title = "微博"
+[[params.social]]
+    #title = "微博"
     name = "weibo"
     url = "https://weibo.com/5628184250"
     target = "_blank"
     weight = 1
 
-[[menu.icon]]
+[[params.social]]
     url = "https://github.com/liuyunyishui"
     name = "github"
+    target = "_blank"
     weight = 2
 
-[[menu.icon]]
+[[params.social]]
     url = "https://stackoverflow.com/users/10763940"
     name = "stack-overflow"
+    target = "_blank"
     weight = 3
 
-[[menu.icon]]
+[[params.social]]
     url = "https://twitter.com/liuyunyishui/"
     name = "twitter"
+    target = "_blank"
     weight = 4
 
-[[menu.icon]]
+[[params.social]]
     url = "https://www.facebook.com/liuyunyishui"
     name = "facebook-f"
+    target = "_blank"
     weight = 5
     
-# [[params.social]]
-#    title = "Twitter"
-#    icon = "fa-twitter"
-#    link = "#"
-#    target = "_blank"
-
-# [[params.social]]
-#    title = "Facebook"
-#    icon = "fa-facebook"
-#    link = "#"
-#    target = "_blank"
-
 # Footer settings
 [params.footer]
     # If copyright is not set, author is used
-    copyright = "Innovation inc"
+    copyright = "流云"
 
 # Page license
 [params.license]  
