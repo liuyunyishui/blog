@@ -1,0 +1,397 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+    <head>
+    <title>Hugo &#43; Github Page 的Blog搭建 | 流云居</title>
+    <meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="description" content="Personal blog">
+    <meta name="author" content="流云">
+    <meta name="generator" content="Hugo 0.52" />
+
+    <link rel="icon" href="/blog/images/icons/favicon.jpg">
+    
+    
+    
+    <link rel="apple-touch-icon-precomposed" href="/blog/images/icons/favicon.ico" />
+    <style>
+        html body {
+            font-family: 'KaiTi', sans-serif;
+            background-color: azure;
+        }
+
+        :root {
+            --accent: SlateBlue;
+            --border-width:  5px ;
+        }
+    </style>
+
+    
+    
+    
+    
+
+    
+    <link rel="stylesheet" href="https://cdn.bootcss.com/twitter-bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
+    
+    <link rel="stylesheet" href="https://cdn.bootcss.com/font-awesome/4.7.0/css/font-awesome.min.css" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+
+    
+    <link rel="stylesheet" href="https://liuyunyishui.github.io/blog/css/main.css">
+    
+        
+    
+</head>
+    <body>
+    <nav class="navbar navbar-default navbar-fixed-top">
+        <div class="container">
+            <div class="navbar-header">
+                <a class="navbar-brand visible-xs" href="#">Hugo &#43; Github Page 的Blog搭建</a>
+                <button class="navbar-toggle" data-target=".navbar-collapse" data-toggle="collapse">
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+            </div>
+            <div class="collapse navbar-collapse">
+                
+                <ul class="nav navbar-nav">
+                    
+                        <li><a href="/blog/">Home</a></li>
+                    
+                        <li><a href="/blog/post.html">Archives</a></li>
+                    
+                        <li><a href="/blog/categories.html">Categories</a></li>
+                    
+                        <li><a href="/blog/about.html">About</a></li>
+                    
+                </ul>
+                
+                
+                <ul class="nav navbar-nav navbar-right">
+                    
+                    <li class="navbar-icon">
+                        <a href="https://weibo.com/5628184250" target="_blank">
+                            <i class="fa fa-weibo"></i>
+                        </a>
+                    </li>
+                    
+                    <li class="navbar-icon">
+                        <a href="https://github.com/liuyunyishui" target="_blank">
+                            <i class="fa fa-github"></i>
+                        </a>
+                    </li>
+                    
+                    <li class="navbar-icon">
+                        <a href="https://stackoverflow.com/users/10763940" target="_blank">
+                            <i class="fa fa-stack-overflow"></i>
+                        </a>
+                    </li>
+                    
+                    <li class="navbar-icon">
+                        <a href="https://twitter.com/liuyunyishui/" target="_blank">
+                            <i class="fa fa-twitter"></i>
+                        </a>
+                    </li>
+                    
+                    <li class="navbar-icon">
+                        <a href="https://www.facebook.com/liuyunyishui" target="_blank">
+                            <i class="fa fa-facebook-f"></i>
+                        </a>
+                    </li>
+                    
+                </ul>
+                
+            </div>
+        </div>
+    </nav>
+<main>
+    <div class="item">
+
+    
+    
+    
+
+    
+    
+
+    <h4><a href="/blog/2018/11/hugo-github-page-%E7%9A%84blog%E6%90%AD%E5%BB%BA.html">Hugo &#43; Github Page 的Blog搭建</a></h4>
+    <h5>November 29, 2018</h5>
+    
+    <a href="https://liuyunyishui.github.io/blogtags/hugo.html"><kbd class="item-tag">hugo</kbd></a>
+    
+    <a href="https://liuyunyishui.github.io/blogtags/blog.html"><kbd class="item-tag">blog</kbd></a>
+    
+
+</div>
+
+    <br> <div class="text-justify">
+
+<h1 id="hugo-github-page的blog搭建">Hugo + Github Page的Blog搭建</h1>
+
+<p>序：初写Blog，此文乃逗比版文风。</p>
+
+<p>记下折腾Blog的过程：<br />
+起因：经过一番对比（折腾）后，入手了这个<strong><a href="https://bwh8.net/cart.php?a=confproduct&amp;i=0&amp;aff=38411">VPS套餐</a></strong>(不用看了，最便宜的套餐，大写的穷。11.03入手，12.13，该套餐已下架，最低的价格已翻倍)，搭了个梯子。<br />
+继续，于是么想搭个blog，环比了一下初步定下了用<strong><a href="https://pages.github.com/">Github Page</a></strong>(内容托管) +
+<strong><a href="https://gohugo.io/">hugo</a></strong>(内容管理，同类型的还有Jekyll、hexo静态，更重量级的如wordpress为代表的cms系统) +
+<strong><a href="https://www.dnspod.cn/">DNSPod</a></strong>(TX云下的域名解析，其他还有阿里云、七牛云等)( <del>域名还没入手</del> 嗯入手了一些免费域名)，结果最后是没用到VPS么，滑稽，后面看情况决定是不是迁移到自己的VPS。
+补充下，图片暂时没分离，直接丢Blog里了，计划使用<a href="https://www.qiniu.com?code=3lfihxnbik1g2">七牛云</a>，之前弄了个账号一直没用过。</p>
+
+<p>选型之后就是撸起袖子开工了。</p>
+
+<h2 id="hugo">Hugo</h2>
+
+<p><strong>前情提要</strong>：win7环境（其他OS仅供参考，推荐读官网教程，很详细，就是是英文的），hugo:v0.52。</p>
+
+<p><a href="https://gohugo.io/">hugo官网</a><br />
+<a href="https://gohugo.io/getting-started">官网教程</a> 先放前面。</p>
+
+<h3 id="第一回合-安装">第一回合：安装</h3>
+
+<p>先是搜索了中文教程，坑的满脸血，后面是啃官网教程，照做到安装完成配置环境变量。（1.下载，2.解压，3.环境变量）</p>
+
+<p>第一个要点来了：以<strong>管理员身份</strong>启动 <code>git bash</code> or <code>cmd</code> or <code>cmder</code>or……等CLI工具，cmd需要以<strong>管理员</strong>身份启动（<strong>见鬼，18-12-01日记录验证，以普通身份也可以启动，前一天必须得管理员身份，中间重启过电脑，同一个用户账号配置没改过，环境抽风的情况最坑了</strong>，12-09：啃官网发现有提到要用管理员，没解释原因，<a href="https://gohugo.io/getting-started/installing/#technical-users">具体在这里</a>，第4条）。</p>
+
+<p>很好，现在可以用<code>hugo server</code>来验证是否ok了，成功的话应该可以看到这样的消息：</p>
+
+<blockquote>
+<p>$ hugo version<br />
+Hugo Static Site Generator v0.52 windows/amd64</p>
+</blockquote>
+
+<p>到此为止，hugo安装配置就搞定了，下面开始第二阶段：</p>
+
+<h3 id="第二回合">第二回合：</h3>
+
+<p>hugo常用命令先来一打：</p>
+
+<pre><code>hugo [command] [-flags]
+
+hugo help                   #万能的help啊
+
+hugo                        #以当前目录作为输入目录来构建hugo站点
+
+hugo new site dirName       #于dirName文件夹下创建新的站
+hugo -t themename           #使用某主题
+hugo server -D              #以本地hugo服务器启动，-D参数启用草稿（等效--buildDrafts）
+                            #在localhost:1313查看
+
+hugo server --watch=false   #停用热部署，或用 --disableLiveReload
+
+hugo config | grep emoji    #查找配置（如表情配置）
+
+hugo new hello.md           #在content目录下创建新的markdown内容文件，使用了archetypes下的模版
+
+</code></pre>
+
+<p><a href="https://gohugo.io/getting-started/configuration/">hugo配置文件详解</a></p>
+
+<p>重要的配置项</p>
+
+<pre><code>baseURL = &quot;https://liuyunyishui.github.io/blog&quot;    #对应Github Page的仓库地址，详见下文githubPage配置
+languageCode = &quot;zh-cn&quot;
+hasCJKLanguage =  true
+
+publishDir=&quot;docs&quot;           #发布到docs文件夹下，配合github page，默认是public
+
+uglyURLs = true             #爬坑参数1，修改配置后必须Ctrl+c重启，
+                            #强迫症专用参数，html后缀必须的，tags还没带上
+                            #（因为这个开始自己整主题模版了）
+
+#canonifyURLs=true          #使用基于baseURL的绝对路径
+#relativeURLs = true        #使用（./）相对路径
+
+enableEmoji = true          #启用表情，怎能少了我大滑稽神教，（没有滑稽）
+
+disableKinds = [&quot;RSS&quot;, &quot;robotsTXT&quot;] #2、别把home、page、section等给禁了，233，需重启
+
+# 对应html&gt;head&gt;title
+title = &quot;流云的Blog&quot;
+theme = &quot;liuyun&quot;            #对应themes 下的主题文件夹名
+
+paginate = 8                #分页数
+
+#菜单，主题模版中定义的
+[[menu.main]]
+    url = &quot;/&quot;
+    name = &quot;Home&quot;
+    weight = 1
+
+#填充模板中的.Site.Params变量
+[params]                    
+    author = &quot;流云&quot;
+    description = &quot;Personal blog&quot;
+
+[permalinks]
+  post = &quot;/:year/:month/:day/:title/&quot;
+
+</code></pre>
+
+<p>😒</p>
+
+<p>三种类型的配置文件查找顺序（最左优先）</p>
+
+<pre><code>./config.toml
+./config.yaml
+./config.json
+</code></pre>
+
+<p>选好主题，下载到themes文件夹下，本处是在minimal主题的基础上改的，<code>hugo -t themename</code>使用主题(themename对应theme下的主题文件夹名)(主题选择可以丢到配置文件里，比CLI优先级高)。
+不同主题需要的配置的属性不同，参考readme.md、exampleSite(不一定有)，有些主题需自行爬坑。</p>
+
+<p><code>hugo</code> build，hugo构建时不会删除之前生成的文件，需要手动删除旧的发布文件（默认是在<code>public/*</code>）
+<code>rm -r public</code>（因github page改docs）；</p>
+
+<p><code>hugo server -D</code>跑起来，<a href="http://localhost:1313">默认地址</a>: <code>localhost:1313</code>；</p>
+
+<p><em><a href="https://m.linuxidc.com/Linux/2018-09/154467.htm">Hugo30分钟搭建静态博客</a>这个可以参考一下，发布时间是18年9月28。</em></p>
+
+<h2 id="github-page">GitHub Page</h2>
+
+<p>两个官网帮助文档索引：<br />
+<a href="https://help.github.com/categories/github-pages-basics">GitHub页面基础</a><br />
+<a href="https://help.github.com/categories/customizing-github-pages">自定义GitHub页面</a></p>
+
+<p>github page 分用户&amp;组织、项目两种类型，其中用户&amp;组织这类需要把项目库名设为yourname.github.io。<br />
+我这里用的是项目方式，对应地址为：<a href="https://liuyunyishui.github.io/blog">https://liuyunyishui.github.io/blog</a> 。<br />
+<strong>这里github page 给的url就是hugo中要配置的baseURL。</strong></p>
+
+<h4 id="发布github-page">发布github page：</h4>
+
+<p>在project &gt; settings  页面下的 Source项，
+分为三种：</p>
+
+<ul>
+<li>master分支发布</li>
+<li>gh-pages分支发布</li>
+<li>master分支下的<code>/docs</code>目录发布</li>
+</ul>
+
+<p>这里采用了第三种docs的方式。</p>
+
+<h2 id="域名-dns解析配置">域名 &amp; DNS解析配置</h2>
+
+<p><strong><a href="https://new.namesilo.com/account_domains?rid=01f8a17ax">自用namesilo管理面板</a></strong><br />
+<strong><a href="https://my.freenom.com/clientarea.php?action=domains">自用freenom管理面板</a></strong><br />
+<strong><a href="https://www.dnspod.cn/console/dashboard">自用dnspod管理面板</a></strong><br />
+<a href="https://new.namesilo.com/account_domain_link_add.php?rid=01f8a17ax">namesilo域名管理界面</a>（对于英语苦手来说真是难找）<br />
+<a href="https://new.namesilo.com/support?rid=01f8a17ax">namesilo帮助文档</a></p>
+
+<h3 id="域名">域名</h3>
+
+<p>可以到<strong><a href="https://www.freenom.com/zh/index.html?lang=zh">freenom</a></strong>（中文支持未建好）申请免费域名使用（只有.tk、.cf、.ml、.ga、.gq等后缀域名免费&amp; 有使用权并没有所有权、转让权，可升级购买）（亲测有效，自备了梯子，多次申请后终于成功注册了几个备用，不使用梯子&rdquo;IP was logod&rdquo;，无法提交订单），<br />
+或者以下域名商都是不错的选择，环比过了，价格角度推荐第一个，上面的freedom也提供付费域名，价格也很亲民。
+以下都是国外的域名商，懒得备案的选择。<br />
+<a href="https://www.freenom.com/en/pricechart.html">freenom域名价格表参考</a>、<a href="https://new.namesilo.com/account_discount_program.php/?rid=01f8a17ax">Namesilo折扣计划域名价格表参考</a>(参与折扣计划会弹窗:</p>
+
+<blockquote>
+<p>please confirm that you agree to the discount program term and conditions
+you will not be able to add account funds for an amount under $50 while you are in the discount program and for 30 days after you leave.</p>
+</blockquote>
+
+<p>google翻译如下：当您在折扣计划期间以及离开后30天内，您将无法为50美元以下的金额添加帐户资金)。</p>
+
+<p>国外域名供应商：</p>
+
+<ul>
+<li><p><a href="https://new.namesilo.com/?rid=01f8a17ax">Namesilo</a>(支持支付宝付款，价格优势)</p></li>
+
+<li><p><a href="https://www.namecheap.com">Namecheap</a> &amp; <a href="https://www.enom.com">enom</a></p></li>
+
+<li><p><a href="https://www.name.com">Name</a></p></li>
+
+<li><p><a href="https://sg.godaddy.com">Godaddy</a>(世界重量级选手)</p></li>
+
+<li><p><a href="https://cn.resellerclub.com/domain-names">cn.resellerclub</a>(亚洲最大，支持中文)</p></li>
+
+<li><p><a href="https://www.domaining.com/">domainsite</a></p></li>
+
+<li><p><a href="https://www.networksolutions.com/">networksolutions</a></p></li>
+
+<li><p><a href="https://uniregistry.com">uniregistry</a>（支持中文）</p></li>
+</ul>
+
+<h3 id="dnspod进行域名解析">DNSpod进行域名解析</h3>
+
+<p>通过上述网站或其他途径得到了自己的域名，下面是用dnspod进行域名解析，请参考<a href="https://support.dnspod.cn/Kb/showarticle/tsid/177">这个</a>&amp;<a href="https://support.dnspod.cn/Kb/showarticle/tsid/28">这个</a>，这个可以做<a href="https://support.dnspod.cn/Kb/guide">索引</a>。</p>
+
+<p>DNSpod是腾讯云旗下的免费域名解析，免费的声称是10台服务器（腾讯的节操么你懂得，当然现在么和阿里云价格战玩的不亦乐乎）。</p>
+
+<p>两个dnspod的免费DNS服务器地址：<code>f1g1ns1.dnspod.net</code>、<code>f1g1ns2.dnspod.net</code></p>
+
+<p>Github服务器IP地址是192.30.252.153和192.30.252.154。</p>
+
+<p>配置<a href="https://www.cloudflare.com">CloudFlare</a>以使用HTTPs，就不用DNSPod了。</p>
+
+<p>设置CNAME</p>
+
+<ol>
+<li>在Github的网站目录下创建<code>CNAME</code>文件</li>
+<li>填自己的域名如<code>http://liuyun.com</code></li>
+</ol>
+
+<p>登录DNSPod，先添加域名，然后添加记录，设置如下</p>
+
+<p>|主机记录   | 记录类型     | 线路类型     | 记录值     | MX优先级     | TTL        |
+| -         | &mdash;&mdash;&mdash;    | &mdash;&mdash;&mdash;    | &mdash;&mdash;&mdash;  | &mdash;&mdash;&mdash;    | &mdash;&mdash;&mdash;  |
+ @          | CNAME        | 默认         |liuyunyishui.github.io. | - | 10<br />
+ www        | CNAME        | 默认         |liuyunyishui.github.io. | - | 10</p>
+
+<p>sublime的Table Editor插件还没搞定，编辑个表格真是为难强迫症了。</p>
+
+<h3 id="尾">尾</h3>
+
+<p>欢迎拍砖，包括错别字什么的在内……（评论系统没上线前是没法的，右上有联系方式），哦，补充以下，以下站点链接有尾巴，悉知：</p>
+
+<ul>
+<li><a href="https://bwh8.net?a=confproduct&amp;i=0&amp;aff=38411">搬瓦工</a><br /></li>
+<li><a href="https://new.namesilo.com/?rid=01f8a17ax">Namesilo</a></li>
+</ul>
+
+<p><strong>注1：</strong> 遇到问题建议去<strong><a href="https://gohugo.io/getting-started">hugo官网教程</a></strong>找答案，如果和我一样是条英文咸鱼，那么Chrome&gt;右键网页&gt;translate To Chanise 可以帮到你（可能需要到浏览器高级设置里开启）,不习惯用Google Chrome？那么<strong><a href="https://translate.google.cn">这个</a></strong>、<strong><a href="https://fanyi.baidu.com">这个</a></strong>、还有<strong><a href="http://fanyi.youdao.com">这个</a></strong>都可以帮到你，建议和原文对照，顺路学习英语。</p>
+
+<p><strong>注2：</strong> 什么？以上不能解决你的问题，那么万能的<strong><a href="https://www.google.com/ncr">这个</a></strong>、以及<strong><a href="https://www.baidu.com">备胎</a></strong>肯定能解决了。什么？打不开，那么看下<strong><a href="https://github.com/shadowsocks/shadowsocks/wiki">ShodowSocks</a></strong> （备胎是没有结果的，神兽横行，暂时折腾的这个）or <strong><a href="https://github.com/v2ray/v2ray-core">V2Ray</a></strong>
+放在<strong><a href="https://bwh8.net?aff=38411">搬瓦工</a></strong>或其他VPS上。</p>
+</div>
+    
+    
+    
+
+    
+</main>
+<footer>
+    <ul class="copyright text-muted">
+        <li>
+            &copy; 2018.
+            流云
+        </li>
+        <li>
+            <a href="https://creativecommons.org/licenses/by-sa/4.0/legalcode">CC-BY-SA-4.0</a>
+        </li>
+    </ul>
+</footer>
+
+
+
+
+<script src="https://cdn.bootcss.com/jquery/3.3.1/jquery.min.js"></script>
+
+
+<script src="https://cdn.bootcss.com/twitter-bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+
+
+
+
+
+<script>$(document).on('click', function() { $('.collapse').collapse('hide'); })</script>
+
+
+
+
+
+<script type="text/javascript" async src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+
+
+</body>
+</html>

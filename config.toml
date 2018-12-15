@@ -26,6 +26,9 @@ MathJax = false
 # 主题设置
 theme = "liuyun"
 # 主题属性
+    
+[permalinks]
+  post = "/:year/:month/:title/"
 
 #菜单
 [[menu.main]]
@@ -61,17 +64,16 @@ theme = "liuyun"
 
     appleicon = "favicon.ico"
 
-    profilePic = "liuyun.jpg"
-
-    accent = "lightblue"
+    accent = "SlateBlue"
     showBorder = true
-    backgroundColor = "white"
+    backgroundColor = "azure"
 
     font = "KaiTi"    # should match the name on Google Fonts!
-    highlight = true
+    highlight = false
     highlightStyle = "solarized-dark"
-    highlightLanguages = ["java", "javascript", "sql", "go"]
+    highlightLanguages = ["java", "javascript", "sql", "go", "shell"]
 
+    profilePic = "liuyun.jpg"
     author = "流云"
     description = "Personal blog"
     githubUsername = "liuyunyishui"
