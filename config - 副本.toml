@@ -1,0 +1,191 @@
+#baseURL = "https://liuyunyishui.github.io/blog/docs"
+languageCode = "zh-cn"
+hasCJKLanguage =  true
+
+publishDir="docs"
+
+uglyURLs = true
+relativeURLs = true
+enableEmoji = true
+
+# 禁用页面种类
+disableKinds = ["page", "section", "taxonomy", "taxonomyTerm", "RSS", "sitemap", "robotsTXT", "404"]
+
+#disqusShortname = "username" # delete this to disable disqus comments
+# Enter your tracking code to enable Google Analytics
+#googleAnalytics = ""
+
+# 对应html>head>title
+title = "流云的Blog"
+description = "流云的Blog"
+
+tags = ["blog"]
+features = ["blog", "themes"]
+
+# 主题设置
+#theme = [
+#"hugo-identity-theme", 
+#"minimal"]
+#themesDir = "themes"
+
+[[menu.main]]
+    url = "/"
+    name = "Home"
+    weight = 1
+
+[[menu.main]]
+    url = "/post/"
+    name = "Posts"
+    weight = 2
+
+[[menu.main]]
+    name = "Categories"
+    url = "/category/"
+    weight = 3
+
+[[menu.main]]
+    url = "/about/"
+    name = "About"
+    weight = 4
+
+
+[params]
+
+
+  # 图片设置
+  # static/images/icons
+  favicon_ico_sizes = "16x16 32x32"
+  #favicon_png_sizes = "96x96"
+
+  favicon_ico = "favicon.ico"
+  
+  #favicon_png = "favicon.png"
+  #favicon_svg = ""
+
+  favicon = "favicon.jpg"
+  appleicon = "favicon.ico"
+  
+
+#  accent = "lightblue"
+#  showBorder = true
+#  backgroundColor = "white"
+
+#  font = "Raleway"  
+  #highlight = true
+  #highlightStyle = "solarized-dark"
+  #highlightLanguages = ["java", "javascript", "sql", "go", "haskell", "kotlin", "scala", "swift"]
+
+  # 个人数据
+  [params.personal]
+
+#    name = "流云"
+#    # 主页头像 ，位置在 /images/avatars/
+#    avatar = "liuyun.jpg"
+#
+#    position = "Java Engineer"
+#
+#    livesIn = "[上海, 中国](#)"
+#    scope = [
+#        "[github](https://github.com/liuyunyishui)",
+        #
+#        #"Maintainer for [awesome-project](#)",
+#        #"Open Source [community management](#)"
+#    ]
+#    biography = "  "
+
+  # Contact form settings
+  [params.contact]
+    email = "403451234@qq.com"
+    postURL = "https://example.com/mailout/"
+    enable = false
+    title = "Touch Me!"
+    namePlaceholder = "Name"
+    emailPlaceholder = "Email"
+    messagePlaceholder = "Message"
+    buttonText = "Send it"
+    success = "Thank you for contacting us."
+    error = "Message could not be send. Please contact us at "
+
+    # Google invisible captcha
+    #[params.contact.captcha]
+    #  sitekey = ""
+
+
+
+  #custom_js  = [""]
+  #custom_css = ["background.css", "icons.css"]
+
+  # Customization switches
+  # Overwrite FontAwesome: see icons.css
+  # custom_icons = true
+  # Overwrite background: see background.css
+  # custom_background = true
+  
+
+  # Social settings
+  # You may change these with your social links or add others
+
+  #[[params.social]]
+    #title = "微博"
+    #icon = "fa-weibo"
+    #link = "https://weibo.com/5628184250/profile"
+    #target = "_blank"
+
+#  [[params.social]]
+#    title = "Twitter"
+#    icon = "fa-twitter"
+#    link = "#"
+#    target = "_blank"
+#
+#  [[params.social]]
+#    title = "Instagram"
+#    icon = "fa-instagram"
+#    link = "#"
+#    target = "_blank"
+#
+#  [[params.social]]
+#    title = "Facebook"
+#    icon = "fa-facebook"
+#    link = "#"
+#    target = "_blank"
+
+  [[params.social]]  
+  # Set your social account here, if you do not have some accounts just comment them
+    a-envelope = "mailto:your@email.com"
+    b-stack-overflow ="https://stackoverflow.com/users/12345678/john-doe"
+    c-twitter = "https://twitter.com/johndoe"
+    d-facebook = "https://www.facebook.com/johndoe"
+    e-github = "https://github.com/johndoe"
+    f-youtube = "https://www.youtube.com/channel/12345678"
+    g-linkedin = "https://www.linkedin.com/johndoe"
+    h-google = "https://plus.google.com/12345678"
+    i-github = "https://github.com/johndoe"
+    j-weibo = "https://weibo.com" 
+    k-weixin = "http://localhost:1313" 
+    l-tumblr = "https://www.tumblr.com/blog/johndoe"
+    m-instagram = "https://instagram.com/johndoe"
+    n-gitlab = "https://gitlab.com/johndoe"
+    o-pinterest = "https://www.pinterest.com/johndoe/"  
+
+
+  # Footer settings
+  [params.footer]
+    # If copyright is not set, author is used
+    copyright = "Innovation inc"
+
+  # Page license
+  [params.license]
+    link = "https://creativecommons.org/licenses/by-sa/4.0/legalcode"
+    name = "CC-BY-SA-4.0"
+
+
+  # Optional piwik tracking
+  #[params.analytics.piwik]
+  #  URL = "https://stats.example.com"
+  #  ID = "42"
+  #  # Track all subdomains with "*.example.com"
+  #  domain = "www.example.com"
+  #  # Optional integrity check hash
+  #  hash = "sha512-RfeD0pacGTqy9m7U6PgehQfS4cc7SIt+e+P+H5e848kEvB/RW84CUGO3O4O3LNbxjevym6KPUZ8muPsMrI8WIw=="
+
+

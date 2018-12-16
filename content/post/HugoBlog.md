@@ -89,7 +89,6 @@ disableKinds = ["RSS", "robotsTXT"] #2、别把home、page、section等给禁了
 title = "流云的Blog"
 theme = "liuyun"            #对应themes 下的主题文件夹名
 
-paginate = 8                #分页数
 
 #菜单，主题模版中定义的
 [[menu.main]]
@@ -207,10 +206,10 @@ Github服务器IP地址是192.30.252.153和192.30.252.154。
 
 登录DNSPod，先添加域名，然后添加记录，设置如下
 
-|主机记录   | 记录类型     | 线路类型     | 记录值     | MX优先级     | TTL        |
-| -         | ---------    | ---------    | ---------  | ---------    | ---------  |
- @          | CNAME        | 默认         |liuyunyishui.github.io. | - | 10           
- www        | CNAME        | 默认         |liuyunyishui.github.io. | - | 10           
+主机记录   | 记录类型     | 线路类型     | 记录值     | MX优先级     | TTL        
+ ---       | ---          | ---          | ---        | ---          | ---          
+ @         | CNAME        | 默认         |liuyunyishui.github.io. | - | 10           
+ www       | CNAME        | 默认         |liuyunyishui.github.io. | - | 10           
 
 sublime的Table Editor插件还没搞定，编辑个表格真是为难强迫症了。
 

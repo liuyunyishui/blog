@@ -210,7 +210,6 @@ disableKinds = [&quot;RSS&quot;, &quot;robotsTXT&quot;] #2、别把home、page�
 title = &quot;流云的Blog&quot;
 theme = &quot;liuyun&quot;            #对应themes 下的主题文件夹名
 
-paginate = 8                #分页数
 
 #菜单，主题模版中定义的
 [[menu.main]]
@@ -333,10 +332,38 @@ you will not be able to add account funds for an amount under $50 while you are 
 
 <p>登录DNSPod，先添加域名，然后添加记录，设置如下</p>
 
-<p>|主机记录   | 记录类型     | 线路类型     | 记录值     | MX优先级     | TTL        |
-| -         | &mdash;&mdash;&mdash;    | &mdash;&mdash;&mdash;    | &mdash;&mdash;&mdash;  | &mdash;&mdash;&mdash;    | &mdash;&mdash;&mdash;  |
- @          | CNAME        | 默认         |liuyunyishui.github.io. | - | 10<br />
- www        | CNAME        | 默认         |liuyunyishui.github.io. | - | 10</p>
+<table>
+<thead>
+<tr>
+<th>主机记录</th>
+<th>记录类型</th>
+<th>线路类型</th>
+<th>记录值</th>
+<th>MX优先级</th>
+<th>TTL</th>
+</tr>
+</thead>
+
+<tbody>
+<tr>
+<td>@</td>
+<td>CNAME</td>
+<td>默认</td>
+<td>liuyunyishui.github.io.</td>
+<td>-</td>
+<td>10</td>
+</tr>
+
+<tr>
+<td>www</td>
+<td>CNAME</td>
+<td>默认</td>
+<td>liuyunyishui.github.io.</td>
+<td>-</td>
+<td>10</td>
+</tr>
+</tbody>
+</table>
 
 <p>sublime的Table Editor插件还没搞定，编辑个表格真是为难强迫症了。</p>
 
