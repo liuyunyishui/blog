@@ -2,7 +2,7 @@
 title = "ServerSecure"
 date = 2018-12-15T22:44:38+08:00
 lastmod = 2018-12-15T22:44:38+08:00
-categories = ["linux", "Secure"]
+categories = ["linux"]
 tags = ["linux", "Server", "Secure"]
 +++
 

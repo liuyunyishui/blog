@@ -3,7 +3,7 @@ title = "Hugo + Github Page 的Blog搭建"
 date = 2018-11-29T23:40:57+08:00
 lastmod = 2018-12-15T21:28:35+08:00
 categories = ["blog"]
-tags = ["hugo", "blog"]
+tags = ["hugo", "blog", "github page", "DNS"]
 +++
 
 # Hugo + Github Page的Blog搭建

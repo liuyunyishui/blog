@@ -11,9 +11,9 @@ uglyURLs = true
 enableEmoji = true
 
 # 禁用页面种类
-disableKinds = ["RSS", "robotsTXT"]
+disableKinds = ["RSS"]
 
-#disqusShortname = "username" # delete this to disable disqus comments
+disqusShortname = "liuyunyishui" # delete this to disable disqus comments
 # Enter your tracking code to enable Google Analytics
 #googleAnalytics = ""
 

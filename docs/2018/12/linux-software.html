@@ -1,0 +1,889 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+    <head>
+    <title>Linux software | 流云居</title>
+    <meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="description" content="Personal blog">
+    <meta name="author" content="流云">
+    <meta name="generator" content="Hugo 0.52" />
+
+    <link rel="icon" href="/blog/images/icons/favicon.jpg">
+    
+    
+    
+    <link rel="apple-touch-icon-precomposed" href="/blog/images/icons/favicon.ico" />
+    <style>
+        html body {
+            font-family: 'KaiTi', sans-serif;
+            background-color: azure;
+        }
+
+        :root {
+            --accent: SlateBlue;
+            --border-width:  5px ;
+        }
+    </style>
+
+    
+    
+    
+    
+    
+
+    
+    <link rel="stylesheet" href="https://cdn.bootcss.com/twitter-bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
+    
+    <link rel="stylesheet" href="https://cdn.bootcss.com/font-awesome/4.7.0/css/font-awesome.min.css" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+
+    
+    <link rel="stylesheet" href="https://liuyunyishui.github.io/blog/css/main.css">
+    
+        
+    
+</head>
+    <body>
+    <nav class="navbar navbar-default navbar-fixed-top">
+        <div class="container">
+            <div class="navbar-header">
+                <a class="navbar-brand visible-xs" href="#">Linux software</a>
+                <button class="navbar-toggle" data-target=".navbar-collapse" data-toggle="collapse">
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+            </div>
+            <div class="collapse navbar-collapse">
+                
+                <ul class="nav navbar-nav">
+                    
+                        <li><a href="/blog/">Home</a></li>
+                    
+                        <li><a href="/blog/post.html">Archives</a></li>
+                    
+                        <li><a href="/blog/categories.html">Categories</a></li>
+                    
+                        <li><a href="/blog/about.html">About</a></li>
+                    
+                </ul>
+                
+                
+                <ul class="nav navbar-nav navbar-right">
+                    
+                    <li class="navbar-icon">
+                        <a href="https://weibo.com/5628184250" target="_blank">
+                            <i class="fa fa-weibo"></i>
+                        </a>
+                    </li>
+                    
+                    <li class="navbar-icon">
+                        <a href="https://github.com/liuyunyishui" target="_blank">
+                            <i class="fa fa-github"></i>
+                        </a>
+                    </li>
+                    
+                    <li class="navbar-icon">
+                        <a href="https://stackoverflow.com/users/10763940" target="_blank">
+                            <i class="fa fa-stack-overflow"></i>
+                        </a>
+                    </li>
+                    
+                    <li class="navbar-icon">
+                        <a href="https://twitter.com/liuyunyishui/" target="_blank">
+                            <i class="fa fa-twitter"></i>
+                        </a>
+                    </li>
+                    
+                    <li class="navbar-icon">
+                        <a href="https://www.facebook.com/liuyunyishui" target="_blank">
+                            <i class="fa fa-facebook-f"></i>
+                        </a>
+                    </li>
+                    
+                </ul>
+                
+            </div>
+        </div>
+    </nav>
+<main>
+    <div class="item">
+
+    
+    
+    
+
+    
+    
+
+    <h4><a href="/blog/2018/12/linux-software.html">Linux software</a></h4>
+    <h5>December 20, 2018</h5>
+    
+    <a href="https://liuyunyishui.github.io/blogtags/linux.html"><kbd class="item-tag">linux</kbd></a>
+    
+    <a href="https://liuyunyishui.github.io/blogtags/tools.html"><kbd class="item-tag">tools</kbd></a>
+    
+
+</div>
+
+    <br> <div class="text-justify">
+
+<h1 id="linux系统软件安装-环境配置">linux系统软件安装 &amp; 环境配置</h1>
+
+<p>整合一下linux软件安装的笔记，原版是跟<a href="https://coding.imooc.com/learn/list/96.html?distId=11b7b9&amp;utm_source=fenxiao">这套课</a>（付费的）时做下的笔记，系统用的是CentOS 6.8，现在VPS上用了CentOS 7，有些命令使用方式变化了。另实操参考了<a href="http://www.runoob.com/linux/linux-command-manual.html">菜鸟教程-linux命令</a>、鸟哥的linux私房菜（第四版）。</p>
+
+<p>Redhat/CentOS体系使用rpm + yum方式；<br />
+Debian/Ubuntu体系使用dpkg + apt-get方式。</p>
+
+<h2 id="一-rpm">一、 rpm</h2>
+
+<p>语法</p>
+
+<pre><code>rpm [-acdhilqRsv][-b&lt;完成阶段&gt;&lt;套间档&gt;+][-e&lt;套件挡&gt;][-f&lt;文件&gt;+][-i&lt;软件&gt;][-p&lt;软件&gt;＋][-U&lt;软件&gt;][-vv][--addsign&lt;软件&gt;+][--allfiles][--allmatches][--badreloc][--buildroot&lt;根目录&gt;][--changelog][--checksig&lt;软件&gt;+][--clean][--dbpath&lt;数据库目录&gt;][--dump][--excludedocs][--excludepath&lt;排除目录&gt;][--force][--ftpproxy&lt;主机名称或IP地址&gt;][--ftpport&lt;通信端口&gt;][--help][--httpproxy&lt;主机名称或IP地址&gt;][--httpport&lt;通信端口&gt;][--ignorearch][--ignoreos][--ignoresize][--includedocs][--initdb][justdb][--nobulid][--nodeps][--nofiles][--nogpg][--nomd5][--nopgp][--noorder][--noscripts][--notriggers][--oldpackage][--percent][--pipe&lt;执行指令&gt;][--prefix&lt;目的目录&gt;][--provides][--queryformat&lt;档头格式&gt;][--querytags][--rcfile&lt;配置档&gt;][--rebulid&lt;软件&gt;][--rebuliddb][--recompile&lt;软件&gt;][--relocate&lt;原目录&gt;=&lt;新目录&gt;][--replacefiles][--replacepkgs][--requires][--resign&lt;软件&gt;+][--rmsource][--rmsource&lt;文件&gt;][--root&lt;根目录&gt;][--scripts][--setperms][--setugids][--short-circuit][--sign][--target=&lt;安装平台&gt;+][--test][--timecheck&lt;检查秒数&gt;][--triggeredby&lt;软件&gt;][--triggers][--verify][--version][--whatprovides&lt;功能特性&gt;][--whatrequires&lt;功能特性&gt;]
+</code></pre>
+
+<p>常用参数</p>
+
+<pre><code>-i  install
+-h  显示安装进度
+-v  显示指令执行过程
+-U  升级指定的软件
+-F  有则升级，无则不管
+
+--prefix newpath 指定路径
+--force 强制安装，谨慎使用
+
+-q 查询
+-a all
+-i information 详细信息
+-l list出所有的文件与目录所在完整文件名
+-c 列出配置文件（/etc/目录下）
+-d 列出说明文件（与man有关的）
+-f 文件属于哪个软件
+
+-e 删除
+
+--rebuilddb 重建rpm数据库
+</code></pre>
+
+<h3 id="常用方式">常用方式</h3>
+
+<pre><code>#安装示例
+rpm -ihv yourrpmpacket
+#安装CentOS 6的yum源
+rpm -ivh http://nginx.org/packages/centos/6/noarch/RPMS/nginx-release-centos-6-0.el6.ngx.noarch.rpm --prefix /usr/local
+
+#查看已安装的
+rpm -qa
+#结合grep使用查询JDK示例
+rpm -qa | grep jdk
+</code></pre>
+
+<h2 id="二-yum">二、 yum</h2>
+
+<h3 id="源配置">源配置</h3>
+
+<p>国外主机默认源就行，国内主机的话可以使用<br />
+阿里云：  <a href="https://mirrors.aliyun.com/">https://mirrors.aliyun.com/</a>  重定向到https的地址了：<a href="https://opsx.alibaba.com/mirror">https://opsx.alibaba.com/mirror</a><br />
+网易云：  <a href="https://mirrors.163.com/">https://mirrors.163.com/</a><br />
+清华云：  <a href="https://mirrors.tuna.tsinghua.edu.cn/centos/7/os/x86_64/">https://mirrors.tuna.tsinghua.edu.cn/centos/7/os/x86_64/</a></p>
+
+<ol>
+<li>源备份
+<code>
+sudo mv /etc/yum.repos.d/CentOS-Base.repo  /etc/yum.repos.d/CentOS-Base.repo.backup
+</code></li>
+<li>下载CentOS-Base.repos到/etc/yum.repos.d/
+<code>
+wget -O /etc/yum.repos.d/CentOS-Base.repo http://mirrors.aliyun.com/repo/Centos-6.repo
+</code></li>
+<li>运行 <code>yum makecache</code> 生成缓存</li>
+</ol>
+
+<p>or</p>
+
+<h4 id="redhat源光盘">Redhat源光盘</h4>
+
+<ol>
+<li>将光盘rhel-server-6.3-i386-dvd.iso拷贝到linux的/tmp/目录下，并且设置其权限为777</li>
+<li>挂载ISO
+<code>
+mkdir -p /mnt/rhel
+mount -t iso9660 -o loop /tmp/rhel-server-6.3-i386-dvd.iso  /mnt/rhel
+</code></li>
+<li>修改repo文件
+<code>vim /etc/yum.repos.d/rhel-source.repo</code>
+CentOS 目录一样
+<code>
+[local]
+name=local
+baseurl=file:///mnt/rhel
+enabled=1
+gpgcheck=0
+</code></li>
+<li>修改yumRepo.py文件
+<code>vim /usr/lib/python2.6/site-packages/yum/yumRepo.py</code>
+查找
+<code>remote = url + '/' +relative</code>
+改成
+<code>remote = url + '/local_yum_source' + relative</code></li>
+<li><code>yum clean all</code></li>
+</ol>
+
+<p>现在即可使用本地的YUM进行安装软件</p>
+
+<h3 id="语法">语法</h3>
+
+<p><code>yum [options] [command] [package ...]</code></p>
+
+<h3 id="常用命令">常用命令</h3>
+
+<ol>
+<li>列出可更新的软件：<code>yum check-update</code></li>
+<li>更新所有软件：<code>yum update</code></li>
+<li>安装指定软件：<code>yum install &lt;package_name&gt;</code></li>
+<li>更新指定软件：<code>yum update &lt;package_name&gt;</code></li>
+<li>列出可安裝软件：<code>yum list</code> 类似<code>rpm -qa</code>
+列出可升级软件:<code>yum list updates</code></li>
+<li><code>yum info</code>: 同上, 类似 <code>rpm -qai</code></li>
+<li><code>yum providers</code>: 类似 <code>rpm -qf</code></li>
+<li>删除软件包：<code>yum remove &lt;package_name&gt;</code></li>
+<li>查找软件包：<code>yum search &lt;keyword&gt;</code></li>
+<li>清除缓存:
+<code>yum clean packages</code>: 清除缓存目录下的软件包<br />
+<code>yum clean headers</code>: 清除缓存目录下的 headers<br />
+<code>yum clean oldheaders</code>: 清除缓存目录下旧的 headers<br />
+<code>yum clean, yum clean all (= yum clean packages; yum clean oldheaders)</code> :清除缓存目录下的软件包及旧的headers<br /></li>
+</ol>
+
+<h4 id="使用示例">使用示例</h4>
+
+<pre><code>#查找源中可安装的jdk列表
+yum search java | grep -i --color JDK
+#安装git
+yum -y install git
+#已安装的 java
+yum list installed |grep java
+</code></pre>
+
+<h2 id="三-debian-ubuuntu-体系下的-dpkg-apt-get">三、Debian/Ubuuntu 体系下的 dpkg &amp; apt-get</h2>
+
+<p>暂时换到了CentOS体系的系统了……
+刚开始用的Ubuuntu, 可谁让是份教程就用CentOS作示例。</p>
+
+<hr />
+
+<p>慕课上的免费linux课程：<br />
+<a href="http://www.imooc.com/learn/481?distId=11b7b9&amp;utm_source=fenxiao">linux权限管理</a><br />
+<a href="http://www.imooc.com/learn/447?distId=11b7b9&amp;utm_source=fenxiao">linux软件安装管理</a><br />
+[linux达人]()<br />
+<a href="http://www.imooc.com/learn/537?distId=11b7b9&amp;utm_source=fenxiao">linux服务管理</a><br />
+<a href="http://www.imooc.com/learn/389?distId=11b7b9&amp;utm_source=fenxiao">iptables防火墙</a></p>
+
+<p>以上全没看，滑稽，好吧，阅读型的学习者通过视频效率有点低, 后面改买书来看了。</p>
+
+<p>默认端口：
+mysql：3306
+ngnix：80
+ftp：20、21</p>
+
+<h1 id="linux-常用软件的安装配置">linux 常用软件的安装配置</h1>
+
+<p>CentOS 7 服务重启使用 <code>systemctl restart ?.service</code>,
+服务启动文件在<code>/usr/lib/systemd/system/</code>。</p>
+
+<h2 id="1-git">1. git</h2>
+
+<h4 id="直接用-yum-y-install-git">直接用<code>yum -y install git</code></h4>
+
+<p>or
+1. 下载<br />
+1) <code>https://github.com/git/git/releases?after=v2.9.1</code><br />
+2) <code>wget https://github.com/git/git/archive/v2.8.0.tar.gz</code></p>
+
+<ol>
+<li>安装依赖
+<code>sudo yum -y install zlib-devel openssl-devel cpio expat-devel gettext-devel curl-devel perl-ExtUtils-CBuilder perl-ExtUtils-MakeMaker</code></li>
+</ol>
+
+<h3 id="查看">查看</h3>
+
+<p><code>git --version</code></p>
+
+<h3 id="配置">配置</h3>
+
+<ol>
+<li>配置用户名(提交时引用)<br />
+<code>git config --global user.name &quot;{name}&quot;</code></li>
+
+<li><p>配置邮箱<br />
+<code>git config --global user.email &quot;{email}&quot;</code></p></li>
+
+<li><p>kdiff3<br />
+<code>git config --global merge.tool &quot;kdiff3&quot;</code></p></li>
+
+<li><p>不管Windows/Unix换行符转换<br />
+<code>git config --global core.autocrlf false</code></p></li>
+
+<li><p>编码配置</p></li>
+</ol>
+
+<pre><code>git config --global gui.encoding utf-8    
+#避免git gui 中文乱码     
+git config --global core.quotepath off    
+#避免git status显示中文文件乱码   
+windows   
+git config --global core.ignorecase false
+</code></pre>
+
+<h3 id="配置git-ssh-key-pair-另一篇ssh也有提到">配置git ssh key pair(另一篇ssh也有提到)</h3>
+
+<ol>
+<li><p><code>ssh-keygen -t rsa -C &quot;@mail.com&quot;</code></p></li>
+
+<li><p><code>ssh-add ~/.ssh/id_rsa</code></p></li>
+
+<li><p><code>cat ~/.ssh/id_rsa.pub</code> 查看公钥</p></li>
+</ol>
+
+<p><code>ssh-add</code> 出错Could not open a connection to your ……
+执行<code>ssh-add ~/.ssh/rsa</code>成功
+<code>ssh-add -l</code>有新加的rsa了</p>
+
+<h2 id="2-nginx">2. nginx</h2>
+
+<h3 id="安装">安装</h3>
+
+<ol>
+<li>添加CentOS7的nginx源<br />
+<code>rpm -Uvh http://nginx.org/packages/centos/7/noarch/RPMS/nginx-release-centos-7-0.el7.ngx.noarch.rpm</code></li>
+<li><code>yum install -y nginx</code></li>
+</ol>
+
+<p>or</p>
+
+<ol>
+<li>安装gcc<br />
+<code>yum install gcc</code>   gcc -v 查询系统是否自带<br /></li>
+<li>安装pcre<br />
+<code>yum install pcre-devel</code><br /></li>
+<li>安装zlib<br />
+<code>yum install zlib zlib-devel</code><br /></li>
+<li>安装openssl<br />
+<code>yum install openssl openssl-delel</code><br />
+合并后的命令：
+<code>yum -y install gcc zlib zlib-devel pcre-devel openssl openssl-devel</code><br /></li>
+<li>下载源码包<br />
+<code>wget http://nginx.org/download/nginx-1.10.2.tar.gz</code><br />
+<code>tar -zxvf nginx-1.10.2.tar.gz</code><br /></li>
+<li>Nginx安装<br />
+1) 进入nginx执行  <code>./configure</code><br />
+注： 增加参数 <code>--prefix=/usr/nginx</code><br />
+<code>whereis ngnix</code> 查询
+默认安装在/usr/local/nginx<br />
+2) make
+<code>make install</code></li>
+</ol>
+
+<h3 id="ngnix常用命令">ngnix常用命令</h3>
+
+<p>测试配置文件：
+安装路经下的<code>/nginx/sbin/nginx -t</code><br />
+启动命令：
+安装路经下的<code>/nginx/sbin/nginx</code><br />
+停止命令：
+安装路经下的<code>/nginx/sbin/nginx -s stop</code> or <code>nginx -s quit</code><br />
+重启命令：
+安装路经下的<code>/nginx/sbin/nginx -s reload</code></p>
+
+<p>nginx路径加到path就不需要这么一串了，参考下面jdk。</p>
+
+<p>查看进程命令：
+<code>ps -ef | grep nginx</code></p>
+
+<p>平滑重启：
+<code>kill -HUP [nginx 主进程号PID]</code></p>
+
+<h3 id="增加防火墙访问权限">增加防火墙访问权限</h3>
+
+<ol>
+<li><code>sudo vim /etc/sysconfig/iptables</code></li>
+<li><code>-A INPUT -p tcp -m state --state NEW -m tcp --dport 80 -j ACCEPT</code></li>
+<li>重启防火墙
+<code>sudo service iptables restart</code></li>
+</ol>
+
+<h3 id="反向代理-虚拟域名配置及测试验证">反向代理、虚拟域名配置及测试验证</h3>
+
+<ol>
+<li>编辑<br />
+<code>sudo vim /usr/local/nginx/conf/nginx.conf</code><br />
+增加 <code>include vhost/*.conf</code><br /></li>
+<li>在/usr/local/nginx/conf/目录新建vhost文件夹
+即：<code>/usr/local/nginx/conf/vhost</code><br /></li>
+
+<li><p>创建域名转发配置文件</p>
+
+<pre><code>liuyun.com.conf
+blog.liuyuns.com.conf
+img.liuyuns.com.conf
+</code></pre>
+
+<p>转发地址<br />
+root (文件夹)<br />
+proxy_pass (端口)</p></li>
+
+<li><p>启动/重启</p></li>
+
+<li><p>访问</p></li>
+</ol>
+
+<p><strong>配置hosts</strong></p>
+
+<p><code>sudo vim /etc/hosts</code></p>
+
+<h2 id="3-jdk">3. jdk</h2>
+
+<p>安装
+<code>yum  install  java-1.8.0-openjdk   java-1.8.0-openjdk-devel</code></p>
+
+<p>or</p>
+
+<ol>
+<li><p>查看已安装的jdk</p>
+
+<pre><code>rpm -qa|grep java
+rpm -qa|grep jdk
+yum list installed |grep java
+#查找源中可安装的列表
+yum search java | grep -i --color JDK
+#卸载
+sudo yum remove ……
+</code></pre></li>
+
+<li><p>下载<br />
+wget ……<br />
+赋予权限进行安装</p>
+
+<pre><code>sudo chmod 777 jdk-7u80-linux-x64.rpm
+777权限：全开（用户、用户组、其他人，7：读写执行）
+</code></pre></li>
+
+<li><p>安装
+<code>sudo rpm -ivh jdk-7u80-linux-x64.rpm</code></p></li>
+
+<li><p>默认安装路径
+<code>usr/java
+例：/usr/java/jdk.1.7.0_80</code></p></li>
+</ol>
+
+<h3 id="配置环境变量">配置环境变量</h3>
+
+<ol>
+<li><code>sudo vim /etc/profile</code><br /></li>
+
+<li><p>添加</p>
+
+<pre><code>export JAVA_HOME=/usr/java/jre-1.8.0-openjdk-1.8.0.121-0.b13.el7_3.x86_64
+export CLASSPATH=.:$JAVA_HOME/jre/lib/rt.jar:$JAVA_HOME/lib/dt.jar:$JAVA_HOME/lib/tools.jar
+</code></pre></li>
+
+<li><p>在export PATH中添加</p>
+
+<pre><code>$JAVA_HOME/bin
+export PATH=$JAVA_HOME/bin:$PATH
+</code></pre></li>
+
+<li><p>使配置生效
+<code>source /etc/profile</code></p></li>
+</ol>
+
+<h3 id="查看-1">查看</h3>
+
+<pre><code>whereis java
+echo $JAVA_HOME
+java -version
+</code></pre>
+
+<h2 id="4-tomcat">4. tomcat</h2>
+
+<ol>
+<li><p>下载<br />
+<code>wget http://mirrors.hust.edu.cn/apache/tomcat/tomcat-8/v8.5.35/bin/apache-tomcat-8.5.35.tar.gz</code></p></li>
+
+<li><p>解压
+<code>tar -zxvf apache-tomcat-7.0.73.tar.gz</code></p></li>
+
+<li><p>配置环境变量<br />
+1) <code>sudo vim /etc/profile</code><br />
+2) <code>export CATALINA_HOME=/dev</code><br />
+3) 使配置生效  <code>source /etc/profile</code></p></li>
+
+<li><p>配置UTF-8字符集<br />
+1) 编辑<code>vim tomcat/conf/server.xml</code><br />
+2) 在配置8080默认端口位置，xml末尾加<code>URIEncoding=&quot;UTF-8&quot;</code></p></li>
+</ol>
+
+<h4 id="验证">验证</h4>
+
+<ol>
+<li>启动
+执行<code>sudo tomcat/bin/startup.sh</code><br />
+注: linux非root用户不能绑定到1024以下端口，非root使用80需曲线救国……iptables配置端口转发（没去验证，这里只是sudo验证了tomcat能正常起动，开放端口的事儿交给Nginx了）。</li>
+<li>访问</li>
+</ol>
+
+<h2 id="5-maven">5. maven</h2>
+
+<ol>
+<li><p>下载</p></li>
+
+<li><p>解压
+<code>tar -zxvf apache-maven-3.0.5-bin.tar.gz</code></p></li>
+
+<li><p>环境变量</p>
+
+<pre><code>export MAVEN_HOME=/develop/apache-maven-3.0.5
+export PATH=$PATH:$JAVA_HOME/bin:$MAVEN_HOME/bin
+</code></pre></li>
+</ol>
+
+<h3 id="验证-1">验证</h3>
+
+<p><code>mvn -version</code></p>
+
+<h3 id="常用命令-1">常用命令</h3>
+
+<pre><code>mvn clean
+mvn compile
+mvn package
+mvn clean package -Dmaven.test.skip=true
+</code></pre>
+
+<h2 id="6-mysql">6. mysql</h2>
+
+<p>yum源获取：  <code>wget -i -c http://dev.mysql.com/get/mysql80-community-release-el7-1.noarch.rpm</code><br />
+yum源安装：  <code>rpm -ivh mysql80-community-release-el7-1.noarch.rpm</code></p>
+
+<ol>
+<li>安装<br />
+1) <code>sudo yum -y install mysql-server</code><br />
+2) <code>rpm -qa | grep mysql</code><br />
+3) 默认配置文件<code>/etc/my.cnf</code><br /></li>
+
+<li><p>字符集配置<br />
+1) <code>vim /etc/my.cnf</code><br />
+2) 添加配置，[mysqld]节点下</p>
+
+<pre><code>default-character-set=utf8
+character-set-server=utf8
+collation-server=utf8_general_ci
+#linux下mysql安装完后是默认：表名区分大小写，列名不区分大小写； 0：区分大小写，1：不区分大小写
+#lower_case_table_names=1
+#设置最大连接数，默认为 151，MySQL服务器允许的最大连接数16384
+#max_connections=1000
+#[mysql]
+#default-character-set = utf8
+</code></pre></li>
+
+<li><p>自启动配置<br />
+1) 执行<code>chkconfig mysqld on</code><br />
+2) 执行<code>chkconfig --list mysqld</code>查看(2~5位on启用状态)</p></li>
+
+<li><p>防火墙配置<br />
+<code>sudo vim /etc/sysconfig/iptables</code><br />
+<code>-A INPUT -p tcp --dport 3306 -j ACCEPT</code><br />
+<code>sudo service iptables restart</code></p></li>
+</ol>
+
+<h3 id="服务启动">服务启动</h3>
+
+<ol>
+<li>启动mysqld服务
+<code>sudo service mysqld start</code> 或
+<code>/ect/rc.d/init.d/mysqld start</code></li>
+<li>初始化环境配置<br />
+默认未设置密码, <code>mysql -u root</code> 登陆服务器</li>
+</ol>
+
+<h5 id="无法启动-mysql日志">无法启动，mysql日志：</h5>
+
+<p>CentOS 7 下，mysql 8，关机重启服务器能自动启动，但关掉mysqld服务后重启不了（为什么要关掉？512M内存吃紧，用掉400M+，关掉后只有100M-），网上的中文方案试了个遍，暂时没解决。<br />
+启动报错，最后查看到mysqld.log,<br />
+关键错误如下:</p>
+
+<blockquote>
+<p>[ERROR] [MY-010735] [Server] Can&rsquo;t open the mysql.plugin table. Please run mysql_upgrade to create it.<br />
+……<br />
+[ERROR] [MY-013129] [Server] A message intended for a client cannot be sent there as no client-session is attached. Therefore, we&rsquo;re sending the information to the error-log instead: MY-001146 - Table &lsquo;mysql.component&rsquo; doesn&rsquo;t exist<br />
+……</p>
+</blockquote>
+
+<p>根据信息执行<code>mysql_upgrade</code></p>
+
+<blockquote>
+<p>mysql_upgrade: Got error: 2002: Can&rsquo;t connect to local MySQL server through socket &lsquo;/var/lib/mysql/mysql.sock&rsquo; (2) while connecting to the MySQL server
+Upgrade process encountered error and will not continue.
+……</p>
+</blockquote>
+
+<p>另
+改启动配置<code>/usr/lib/systemd/system/mysqld.service</code>里，
+注释掉</p>
+
+<pre><code>#Restart=on-failure
+#RestartPreventExitStatus=1
+#PrivateTmp=false
+</code></pre>
+
+<p>嗯，以上都没用。centos7，mysql8.0，重启服务器能开机启动，关掉mysqld服务restart不了……</p>
+
+<h3 id="mysql配置">mysql配置</h3>
+
+<ol>
+<li>查看当前用户
+<code>select user, host, password from mysql.user</code></li>
+<li>修改root密码</li>
+</ol>
+
+<pre><code>set password for root@localhost=password('{pwd}');
+set password for root@127.0.0.1=password('{pwd}');
+</code></pre>
+
+<ol>
+<li>exit退出mysql</li>
+<li>重新登陆
+<code>mysql -u root -p</code></li>
+<li>输入密码</li>
+<li>删除匿名用户
+查看是否存在匿名用户 <code>select user, host from mysql.user;</code>
+删除匿名用户          <code>delete from mysql.user where user='';</code>
+再次查看<br />
+刷新                  <code>flush privileges;</code></li>
+<li>插入新用户
+<code>insert into mysql.user(Host, User, Password) values(&quot;[localhost]&quot;, &quot;[username]&quot;, password(&quot;pwd&quot;));</code></li>
+<li>使生效
+<code>flush privileges;</code></li>
+<li>创建新database(databasename方括号外面加1左边的撇号)
+<code>create database</code>[databasename]<code>default character set utf8 collate utf8_general_ci;</code></li>
+<li>用户赋予本地访问的所有权限
+<code>grant all privileges on [databasename].* to [username]@[localhost] identified by '[pwd]';</code></li>
+<li>给用户开通外网的所有权限
+<code>
+grant all privileges on [databasename].* to '[username]'@'%' identified by '[pwd]';
+grant [select, insert, update, delete] on [database].[table] to [who]@[where] identified by '[pwd]';
+</code></li>
+</ol>
+
+<h3 id="连接">连接</h3>
+
+<ol>
+<li>ip</li>
+<li>客户端连接</li>
+</ol>
+
+<h2 id="7-vsftpd-文件服务器">7. vsftpd 文件服务器</h2>
+
+<h3 id="安装-1">安装</h3>
+
+<ol>
+<li><code>yum -y install vsftpd</code></li>
+<li><code>rpm -qa|grep vsftpd</code></li>
+<li><code>/etc/vsftpd/vsftpd.conf</code></li>
+</ol>
+
+<h3 id="创建虚拟用户">创建虚拟用户</h3>
+
+<ol>
+<li>在<code>/home</code>创建ftpfile:
+<code>mkdir ftpfile</code></li>
+<li>添加匿名用户
+<code>useradd ftpuser -d /ftpfile -s /sbin/nologin</code></li>
+<li>修改ftpfile权限
+<code>chown -R ftpuser.ftpuser /ftpfile</code>
+-R遍历 用户.用户组 to /ftpfile</li>
+<li>重设密码
+<code>passwd ftpuser</code></li>
+</ol>
+
+<h3 id="配置-1">配置</h3>
+
+<ol>
+<li><code>cd /etc/vsftpd</code></li>
+<li><code>sudo vim chroot_list</code></li>
+<li>把新增的虚拟用户加到配置文件</li>
+
+<li><p><code>sudo vim /etc/selinux/config</code><br />
+<code>SELINUX=disabled</code><br />
+<code>sudo setenforce 0</code><br />
+注：如果验证出现550拒绝访问执行
+<code>sudo setsebbool _p ftp_home-dir 1</code><br />
+重启服务器</p></li>
+
+<li><p><code>sudo vim /etc/vsftpd/vsftpd.conf</code></p></li>
+</ol>
+
+<h3 id="防火墙配置">防火墙配置</h3>
+
+<ol>
+<li><code>sudo vim /etc/sysconfig/iptables</code></li>
+<li>添加规则
+<code>
+-A INPUT -p TCP --dport 61001:62000 -j ACCEPT
+-A OUTPUT -p TCP --sport 61001:62000 -j ACCEPT
+-A INPUT -p TCP --dport 20 -j ACCEPT
+-A OUTPUT -p TCP --sport 20 -j ACCEPT
+-A INPUT -p TCP --dport 21 -j ACCEPT
+-A OUTPUT -p TCP --sport 21 -j ACCEPT
+</code></li>
+<li>重启防火墙
+<code>sudo service iptable restart</code></li>
+</ol>
+
+<h3 id="验证-2">验证</h3>
+
+<ol>
+<li>重启ftp服务
+<code>sudo service vsftpd restart</code></li>
+<li>ftp://……</li>
+<li>用户名ftpuser密码password</li>
+</ol>
+
+<h2 id="使用sftp传输文件到虚机">使用sftp传输文件到虚机</h2>
+
+<p>远端<br />
+pwd：当前目录信息<br />
+ls：查看远端当前目录下的内容</p>
+
+<p>本地+前缀&rdquo;l&rdquo;，lcd、ll</p>
+
+<p>下载远程文件 <code>get -r &lt;remote_file_name&gt; [local_file_name]</code>
+上传本地文件到远程 <code>put -r local_directory_name</code>
+-r递归的复制文件夹</p>
+</div>
+    
+    
+    
+        <h4 class="page-header">Related</h4>
+         <div class="item">
+
+    
+    
+    
+
+    
+    
+
+    <h4><a href="/blog/2018/12/iptables.html">Iptables</a></h4>
+    <h5>December 15, 2018</h5>
+    
+    <a href="https://liuyunyishui.github.io/blogtags/linux.html"><kbd class="item-tag">linux</kbd></a>
+    
+    <a href="https://liuyunyishui.github.io/blogtags/secure.html"><kbd class="item-tag">Secure</kbd></a>
+    
+    <a href="https://liuyunyishui.github.io/blogtags/iptables.html"><kbd class="item-tag">iptables</kbd></a>
+    
+
+</div>
+  <div class="item">
+
+    
+    
+    
+
+    
+    
+
+    <h4><a href="/blog/2018/12/serversecure.html">ServerSecure</a></h4>
+    <h5>December 15, 2018</h5>
+    
+    <a href="https://liuyunyishui.github.io/blogtags/linux.html"><kbd class="item-tag">linux</kbd></a>
+    
+    <a href="https://liuyunyishui.github.io/blogtags/server.html"><kbd class="item-tag">Server</kbd></a>
+    
+    <a href="https://liuyunyishui.github.io/blogtags/secure.html"><kbd class="item-tag">Secure</kbd></a>
+    
+
+</div>
+  <div class="item">
+
+    
+    
+    
+
+    
+    
+
+    <h4><a href="/blog/2018/12/ssh.html">SSH</a></h4>
+    <h5>December 15, 2018</h5>
+    
+    <a href="https://liuyunyishui.github.io/blogtags/linux.html"><kbd class="item-tag">linux</kbd></a>
+    
+    <a href="https://liuyunyishui.github.io/blogtags/ssh.html"><kbd class="item-tag">ssh</kbd></a>
+    
+    <a href="https://liuyunyishui.github.io/blogtags/secure.html"><kbd class="item-tag">Secure</kbd></a>
+    
+
+</div>
+ 
+    
+
+    
+        <h4 class="page-header">Comments</h4>
+        <div id="disqus_thread"></div>
+<script type="application/javascript">
+    var disqus_config = function () {
+    
+    
+    
+    };
+    (function() {
+        if (["localhost", "127.0.0.1"].indexOf(window.location.hostname) != -1) {
+            document.getElementById('disqus_thread').innerHTML = 'Disqus comments not available by default when the website is previewed locally.';
+            return;
+        }
+        var d = document, s = d.createElement('script'); s.async = true;
+        s.src = '//' + "liuyunyishui" + '.disqus.com/embed.js';
+        s.setAttribute('data-timestamp', +new Date());
+        (d.head || d.body).appendChild(s);
+    })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+<a href="https://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+    
+</main>
+<footer>
+    <ul class="copyright text-muted">
+        <li>
+            &copy; 2018.
+            流云
+        </li>
+        <li>
+            <a href="https://creativecommons.org/licenses/by-sa/4.0/legalcode">CC-BY-SA-4.0</a>
+        </li>
+    </ul>
+</footer>
+
+
+
+
+<script src="https://cdn.bootcss.com/jquery/3.3.1/jquery.min.js"></script>
+
+
+<script src="https://cdn.bootcss.com/twitter-bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+
+
+
+
+
+<script>$(document).on('click', function() { $('.collapse').collapse('hide'); })</script>
+
+
+
+
+
+<script type="text/javascript" async src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+
+
+</body>
+</html>
