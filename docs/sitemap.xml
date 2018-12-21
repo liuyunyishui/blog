@@ -43,13 +43,13 @@
   </url>
   
   <url>
-    <loc>https://liuyunyishui.github.io/blog/tags/blog.html</loc>
+    <loc>https://liuyunyishui.github.io/blog/categories/blog.html</loc>
     <lastmod>2018-12-15T21:28:35+08:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>https://liuyunyishui.github.io/blog/categories/blog.html</loc>
+    <loc>https://liuyunyishui.github.io/blog/tags/blog.html</loc>
     <lastmod>2018-12-15T21:28:35+08:00</lastmod>
     <priority>0</priority>
   </url>
@@ -85,25 +85,25 @@
   </url>
   
   <url>
-    <loc>https://liuyunyishui.github.io/blog/tags/linux.html</loc>
-    <lastmod>2018-12-20T20:32:52+08:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
     <loc>https://liuyunyishui.github.io/blog/categories/linux.html</loc>
     <lastmod>2018-12-20T20:32:52+08:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>https://liuyunyishui.github.io/blog/tags/markdown.html</loc>
-    <lastmod>2018-11-29T23:40:57+08:00</lastmod>
+    <loc>https://liuyunyishui.github.io/blog/tags/linux.html</loc>
+    <lastmod>2018-12-20T20:32:52+08:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
     <loc>https://liuyunyishui.github.io/blog/categories/markdown.html</loc>
+    <lastmod>2018-11-29T23:40:57+08:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://liuyunyishui.github.io/blog/tags/markdown.html</loc>
     <lastmod>2018-11-29T23:40:57+08:00</lastmod>
     <priority>0</priority>
   </url>
@@ -145,7 +145,7 @@
   </url>
   
   <url>
-    <loc>https://liuyunyishui.github.io/blog/categories/tools.html</loc>
+    <loc>https://liuyunyishui.github.io/blog/categories/windows.html</loc>
     <lastmod>2018-12-14T21:45:39+08:00</lastmod>
     <priority>0</priority>
   </url>

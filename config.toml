@@ -20,9 +20,9 @@ disqusShortname = "liuyunyishui" # delete this to disable disqus comments
 # 对应html>head>title、Title属性
 title = "流云居"
 description = "流云的Blog"
-paginate = 8
+paginate = 3
 
-MathJax = false
+mathJax = false
 # 主题设置
 theme = "liuyun"
 # 主题属性

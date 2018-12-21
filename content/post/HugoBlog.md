@@ -197,7 +197,8 @@ Github服务器IP地址是192.30.252.153和192.30.252.154。
 
 
 配置[CloudFlare](https://www.cloudflare.com)以使用HTTPs，就不用DNSPod了。
-
+clyde.ns.cloudflare.com
+venus.ns.cloudflare.com
 
 设置CNAME
 

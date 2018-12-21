@@ -2,7 +2,7 @@
 title= "software install list"
 date= 2018-12-14T21:45:39+08:00
 lastmod=2018-12-14T21:45:39+08:00
-categories= ["tools"]
+categories= ["windows"]
 tags= ["tools", "windows"]
 +++
 
