@@ -200,6 +200,7 @@ git config --global core.ignorecase false
 执行`ssh-add ~/.ssh/rsa`成功
 `ssh-add -l`有新加的rsa了
 
+[Pro Git](https://git-scm.com/book/zh)
 
 ## 2. nginx
 

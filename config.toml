@@ -20,7 +20,7 @@ disqusShortname = "liuyunyishui" # delete this to disable disqus comments
 # 对应html>head>title、Title属性
 title = "流云居"
 description = "流云的Blog"
-paginate = 3
+paginate = 8
 
 mathJax = false
 # 主题设置
@@ -39,6 +39,11 @@ theme = "liuyun"
 [[menu.main]]
     url = "/post.html"
     name = "Archives"
+    weight = 2
+
+[[menu.main]]
+    url = "/life.html"
+    name = "life"
     weight = 2
 
 [[menu.main]]
@@ -75,7 +80,7 @@ theme = "liuyun"
 
     profilePic = "liuyun.jpg"
     author = "流云"
-    description = "Personal blog"
+    description = "博采众家，一己之见！"
     githubUsername = "liuyunyishui"
 
     
@@ -92,31 +97,30 @@ theme = "liuyun"
     #title = "微博"
     name = "weibo"
     url = "https://weibo.com/5628184250"
-    target = "_blank"
     weight = 1
 
 [[params.social]]
     url = "https://github.com/liuyunyishui"
     name = "github"
-    target = "_blank"
     weight = 2
 
 [[params.social]]
     url = "https://stackoverflow.com/users/10763940"
     name = "stack-overflow"
-    target = "_blank"
     weight = 3
+[[params.social]]
+    url = "https://space.bilibili.com/287386606"
+    name = "bilibili"
+    weigit =3
 
 [[params.social]]
     url = "https://twitter.com/liuyunyishui/"
     name = "twitter"
-    target = "_blank"
     weight = 4
 
 [[params.social]]
     url = "https://www.facebook.com/liuyunyishui"
     name = "facebook-f"
-    target = "_blank"
     weight = 5
     
 # Footer settings
@@ -125,6 +129,6 @@ theme = "liuyun"
     copyright = "流云"
 
 # Page license
-[params.license]  
-    link = "https://creativecommons.org/licenses/by-sa/4.0/legalcode"
-    name = "CC-BY-SA-4.0"
+#[params.license]  
+#    link = "https://creativecommons.org/licenses/by-sa/4.0/legalcode"
+#    name = "CC-BY-SA-4.0"
