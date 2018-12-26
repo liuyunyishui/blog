@@ -2,7 +2,7 @@
 title = "Learn"
 date = 2018-12-22T21:29:28+08:00
 lastmod = 2018-12-22T21:29:28+08:00
-categories = ["learn"]
+categories = ["life"]
 tags = ["learn"]
 draft = true
 +++

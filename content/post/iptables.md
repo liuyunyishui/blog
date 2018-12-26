@@ -2,8 +2,8 @@
 title = "Iptables"
 date = 2018-12-15T23:09:12+08:00
 lastmod = 2018-12-15T23:09:12+08:00
-categories = ["linux"]
-tags = ["linux", "Secure", "iptables"]
+categories = ["Linux"]
+tags = ["linux", "secure", "iptables"]
 +++
 
 # 防火墙iptables

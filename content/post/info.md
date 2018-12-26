@@ -2,7 +2,7 @@
 title = "Post Info"
 date = 2018-12-22T20:43:30+08:00
 lastmod = 2018-12-22T20:43:30+08:00
-categories = ["info"]
+categories = ["Info"]
 tags = ["info"]
 weight = 1
 +++

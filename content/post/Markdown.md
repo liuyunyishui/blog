@@ -1,7 +1,7 @@
 +++
 title= "markdown基本语法"
 date= 2018-11-29T23:40:57+08:00
-categories= ["markdown"]
+categories= ["Markdown"]
 tags=["markdown"]
 +++
 

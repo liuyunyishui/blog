@@ -2,7 +2,7 @@
 title= "software install list"
 date= 2018-12-14T21:45:39+08:00
 lastmod=2018-12-14T21:45:39+08:00
-categories= ["windows"]
+categories= ["Windows"]
 tags= ["tools", "windows"]
 +++
 
@@ -35,7 +35,7 @@ OS:  win7**
 ---
 [CCleaner](http://www.ccleaner.com/)  垃圾清理、硬盘管理、软件管理等
 
-[7Z](https://www.7-zip.org/)  压缩，zip、rar、7z等格式都支持
+[7Z](https://www.7-zip.org/)  压缩，zip、rar、7z等格式都支持（附带散列值工具，值得一提的）
 
 ## Edit
 [sublime](http://www.sublimetext.com/)  快，不卡，插件丰富，ps：最新版（3.1.1）的图标与界面UI都要比以前丑好多    
@@ -55,6 +55,7 @@ OS:  win7**
 [wps]()：卡 & 广告多，不用 (链接都懒得给了)      
 [google doc](https://docs.google.com)   Google在线文档（需扶墙）  
 [Adobe :PDF](https://helpx.adobe.com/download-install.html?promoid=2K4PCJ2R&mv=other)   
+[sumatraPDF](https://www.sumatrapdfreader.org/download-free-pdf-viewer.html)
 
 [Xmind](https://www.xmind.net) 脑图
 

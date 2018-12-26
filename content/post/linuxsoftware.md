@@ -2,7 +2,7 @@
 title = "Linux software"
 date = 2018-12-20T20:32:52+08:00
 lastmod = 2018-12-20T20:32:52+08:00
-categories = ["linux"]
+categories = ["Linux"]
 tags = ["linux", "tools"]
 +++
 
@@ -127,6 +127,9 @@ yum search java | grep -i --color JDK
 yum -y install git
 #已安装的 java
 yum list installed |grep java
+
+# 配置docker库
+yum-config-manager --add-repo https://download.docker.com/linux/centos/docker-ce.repo
 ```
 
 

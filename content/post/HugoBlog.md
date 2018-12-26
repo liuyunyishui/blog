@@ -2,7 +2,7 @@
 title = "Hugo + Github Page 的Blog搭建"
 date = 2018-11-29T23:40:57+08:00
 lastmod = 2018-12-15T21:28:35+08:00
-categories = ["blog"]
+categories = ["Blog"]
 tags = ["hugo", "blog", "github page", "DNS"]
 +++
 
@@ -196,9 +196,9 @@ DNSpod是腾讯云旗下的免费域名解析，免费的声称是10台服务器
 Github服务器IP地址是192.30.252.153和192.30.252.154。
 
 
-配置[CloudFlare](https://www.cloudflare.com)以使用HTTPs，就不用DNSPod了。
-clyde.ns.cloudflare.com
-venus.ns.cloudflare.com
+配置[CloudFlare](https://www.cloudflare.com)以使用HTTPs，就不用DNSPod了。   
+clyde.ns.cloudflare.com    
+venus.ns.cloudflare.com    
 
 设置CNAME
 

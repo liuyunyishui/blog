@@ -2,8 +2,8 @@
 title= "SSH"
 date= 2018-12-15T13:59:37+08:00
 lastmod= 2018-12-15T13:59:37+08:00
-categories= ["linux"]
-tags= ["linux", "ssh", "Secure"]
+categories= ["Linux"]
+tags= ["linux", "ssh", "secure"]
 +++
 
 # SSH
